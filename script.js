@@ -12,28 +12,6 @@ const trackedPages = [
   "calculator",
 ];
 
-function ensureMainLandmark() {
-  const main = document.querySelector("main");
-
-  if (!main) {
-    return null;
-  }
-
-  if (!main.id) {
-    main.id = "main-content";
-  }
-
-  if (!document.querySelector(".skip-link")) {
-    const skipLink = document.createElement("a");
-    skipLink.className = "skip-link";
-    skipLink.href = `#${main.id}`;
-    skipLink.textContent = "Skip to main content";
-    document.body.insertAdjacentElement("afterbegin", skipLink);
-  }
-
-  return main;
-}
-
 function applyCurrentPageState() {
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
 
@@ -281,7 +259,6 @@ quizForms.forEach((quizForm) => {
   });
 });
 
-ensureMainLandmark();
 applyCurrentPageState();
 renderProgressPanels();
 renderCertificate();
