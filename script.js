@@ -12,11 +12,90 @@ const trackedPages = [
   "calculator",
 ];
 
-if (navToggle && siteNav) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
+function ensureMainLandmark() {
+  const main = document.querySelector("main");
+
+  if (!main) {
+    return null;
+  }
+
+  if (!main.id) {
+    main.id = "main-content";
+  }
+
+  if (!document.querySelector(".skip-link")) {
+    const skipLink = document.createElement("a");
+    skipLink.className = "skip-link";
+    skipLink.href = `#${main.id}`;
+    skipLink.textContent = "Skip to main content";
+    document.body.insertAdjacentElement("afterbegin", skipLink);
+  }
+
+  return main;
+}
+
+function applyCurrentPageState() {
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+  document.querySelectorAll(".site-nav a").forEach((link) => {
+    const href = link.getAttribute("href");
+
+    if (href === currentPath) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
   });
+}
+
+if (navToggle && siteNav) {
+  navToggle.setAttribute("aria-label", "Toggle navigation menu");
+  const mobileNavQuery = window.matchMedia("(max-width: 960px)");
+
+  function setNavState(isOpen) {
+    siteNav.classList.toggle("is-open", isOpen);
+    siteNav.setAttribute("aria-hidden", mobileNavQuery.matches ? String(!isOpen) : "false");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  }
+
+  function syncNavForViewport() {
+    if (!mobileNavQuery.matches) {
+      siteNav.classList.remove("is-open");
+      siteNav.setAttribute("aria-hidden", "false");
+      navToggle.setAttribute("aria-expanded", "false");
+    } else if (!siteNav.classList.contains("is-open")) {
+      siteNav.setAttribute("aria-hidden", "true");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = !siteNav.classList.contains("is-open");
+    setNavState(isOpen);
+
+    if (isOpen) {
+      const firstLink = siteNav.querySelector("a");
+      firstLink?.focus();
+    }
+  });
+
+  navToggle.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowDown" && !siteNav.classList.contains("is-open")) {
+      event.preventDefault();
+      setNavState(true);
+      siteNav.querySelector("a")?.focus();
+    }
+  });
+
+  siteNav.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setNavState(false);
+      navToggle.focus();
+    }
+  });
+
+  mobileNavQuery.addEventListener("change", syncNavForViewport);
+  syncNavForViewport();
 }
 
 function getProgressState() {
@@ -55,6 +134,11 @@ function renderProgressPanels() {
 
     if (fill) {
       fill.style.width = `${percent}%`;
+      fill.parentElement?.setAttribute("role", "progressbar");
+      fill.parentElement?.setAttribute("aria-valuemin", "0");
+      fill.parentElement?.setAttribute("aria-valuemax", String(total));
+      fill.parentElement?.setAttribute("aria-valuenow", String(completedCount));
+      fill.parentElement?.setAttribute("aria-label", "Course progress");
     }
 
     if (status) {
@@ -68,6 +152,7 @@ function renderProgressPanels() {
     if (button) {
       button.textContent = isComplete ? "Completed" : "Mark as complete";
       button.disabled = isComplete;
+      button.setAttribute("aria-disabled", String(isComplete));
       button.addEventListener("click", () => {
         const nextState = getProgressState();
         nextState[page] = true;
@@ -150,6 +235,7 @@ if (form) {
     const newBill = currentBill - savings;
 
     offsetValue.textContent = `${offsetInput.value}%`;
+    offsetInput.setAttribute("aria-valuetext", `${offsetInput.value} percent offset`);
     savingsOutput.textContent = formatCurrency(savings);
     billOutput.textContent = `New estimated monthly bill: ${formatCurrency(newBill)}`;
   }
@@ -195,5 +281,7 @@ quizForms.forEach((quizForm) => {
   });
 });
 
+ensureMainLandmark();
+applyCurrentPageState();
 renderProgressPanels();
 renderCertificate();
