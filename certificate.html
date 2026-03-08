@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SolarSpark Academy | Certificate of Completion</title>
+  <meta name="description" content="Printable certificate of completion for the SolarSpark Academy learning track.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="certificate">
+  <div class="page-shell">
+    <header class="site-header no-print">
+      <a class="brand" href="index.html">SolarSpark Academy</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="beginners.html">Beginners</a>
+        <a href="technology.html">Technology</a>
+        <a href="system-design.html">System Design</a>
+        <a href="economics.html">Economics</a>
+        <a href="advanced.html">Advanced</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="resources.html">Resources</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="calculator.html">Calculator</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero no-print">
+        <p class="eyebrow">Certificate</p>
+        <h1>Generate a printable certificate of completion.</h1>
+        <p class="hero-text">
+          Enter the learner name, then print a clean course certificate based on the saved progress in this browser.
+        </p>
+      </section>
+
+      <section class="section certificate-controls no-print">
+        <div class="content-panel">
+          <label class="certificate-label" for="certificate-name">Learner name</label>
+          <input class="certificate-input" id="certificate-name" type="text" placeholder="Enter full name">
+          <p class="certificate-note" id="certificate-status" aria-live="polite"></p>
+          <div class="hero-actions">
+            <button class="button button-primary" id="print-certificate" type="button">Print Certificate</button>
+            <a class="button button-secondary" href="resources.html">Back to Resources</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section certificate-sheet">
+        <div class="certificate-border">
+          <p class="eyebrow">SolarSpark Academy</p>
+          <h1>Certificate of Completion</h1>
+          <p class="certificate-subtitle">This certifies that</p>
+          <h2 id="certificate-recipient">Learner Name</h2>
+          <p class="certificate-subtitle">
+            has completed the SolarSpark Academy guided learning track in solar energy foundations,
+            technology, design, economics, and advanced system thinking.
+          </p>
+          <div class="certificate-meta">
+            <div>
+              <span>Completion status</span>
+              <strong id="certificate-progress">0/8 tracked pages completed</strong>
+            </div>
+            <div>
+              <span>Date issued</span>
+              <strong id="certificate-date">--</strong>
+            </div>
+          </div>
+          <div class="certificate-signoff">
+            <div class="signature-line">
+              <span>Learning record</span>
+              <strong>SolarSpark Academy</strong>
+            </div>
+            <div class="signature-line">
+              <span>Certificate ID</span>
+              <strong id="certificate-id">SSA-0000</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

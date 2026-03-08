@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SolarSpark Academy | Solar System Design</title>
+  <meta name="description" content="Learn practical solar system design, including load audits, sizing logic, battery planning, and safety thinking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="system-design">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">SolarSpark Academy</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="beginners.html">Beginners</a>
+        <a href="technology.html">Technology</a>
+        <a href="system-design.html">System Design</a>
+        <a href="economics.html">Economics</a>
+        <a href="advanced.html">Advanced</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="resources.html">Resources</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="calculator.html">Calculator</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Design track</p>
+        <h1>Good solar design starts with the load, not with the panels.</h1>
+        <p class="hero-text">
+          One of the most common mistakes in solar planning is starting with a guessed panel count.
+          Better design starts with energy demand, critical loads, operating hours, surge behavior,
+          and realistic production assumptions.
+        </p>
+        <img class="hero-image" src="images/solar-grid.svg" alt="Illustration showing solar generation connected through a grid-like power path to a building.">
+      </section>
+
+      <section class="section progress-panel" data-track-page="system-design">
+        <div>
+          <p class="eyebrow">Page progress</p>
+          <h2>Record your design study progress.</h2>
+          <p class="progress-copy">This page pairs well with a written load-audit exercise using the downloadable worksheet.</p>
+        </div>
+        <div class="progress-card">
+          <div class="progress-bar"><span class="progress-fill"></span></div>
+          <p class="progress-status" aria-live="polite"></p>
+          <button class="button button-primary progress-button" type="button">Mark as complete</button>
+          <a class="text-link" href="worksheets/design-worksheet.html" download>Download design worksheet</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Visual study aid</p>
+          <h2>Design work begins with measurement and site inspection</h2>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-card">
+            <img class="gallery-image" src="images/site-audit.svg" alt="Illustration of a checklist for load audit and a magnifying glass over a solar site review.">
+            <figcaption>A strong solar design process starts by listing loads, operating hours, and critical appliances before selecting hardware.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img class="gallery-image" src="images/solar-grid.svg" alt="Illustration of solar generation linked to a home and a wider power network.">
+            <figcaption>System architecture should reflect whether the project is grid-tied, hybrid, backup-oriented, or fully off-grid.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section split-section">
+        <div class="content-panel">
+          <p class="eyebrow">Step 1</p>
+          <h2>Perform a load audit</h2>
+          <img class="section-image" src="images/site-audit.svg" alt="Diagram showing a load audit checklist and site assessment tools.">
+          <p>
+            A load audit lists the devices that will run on the system, how much power each device
+            requires, how many hours it operates, and whether it must run during an outage. This
+            turns vague expectations into measurable energy demand.
+          </p>
+          <p>
+            Critical loads should be separated from non-critical loads. Refrigeration, lighting,
+            communications, medical devices, and pumps may need priority during limited-energy periods.
+          </p>
+        </div>
+        <div class="content-panel accent-panel">
+          <h3>Design warning</h3>
+          <p>
+            If the daily load estimate is wrong, every later decision can be wrong: panel sizing,
+            battery sizing, inverter size, cable sizing, and budget planning.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Step 2</p>
+          <h2>Size the major parts of the system</h2>
+        </div>
+        <div class="card-grid">
+          <article class="info-card">
+            <h3>Array sizing</h3>
+            <p>
+              Solar array size depends on daily energy demand, local solar resource, expected losses,
+              and whether the system is grid-assisted or stand-alone.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Battery sizing</h3>
+            <p>
+              Battery capacity should reflect the required autonomy period, allowable depth of
+              discharge, temperature effects, and efficiency losses.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Inverter sizing</h3>
+            <p>
+              The inverter must handle both continuous loads and startup surges from motors,
+              compressors, and pumps.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Step 3</p>
+          <h2>Match system architecture to the actual use case</h2>
+        </div>
+        <div class="reading-grid">
+          <article class="reading-card">
+            <h3>Home backup system</h3>
+            <p>
+              Often designed around lighting, entertainment, communications, fans, and selected
+              sockets. The focus is usually outage support and bill reduction rather than full-house
+              electrification.
+            </p>
+          </article>
+          <article class="reading-card">
+            <h3>School or clinic system</h3>
+            <p>
+              Reliability and prioritization become more important. Education, vaccine storage,
+              internet connectivity, and lighting quality may be mission-critical.
+            </p>
+          </article>
+          <article class="reading-card">
+            <h3>Business system</h3>
+            <p>
+              Productive loads, operating hours, diesel displacement, and downtime cost become central
+              economic drivers.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Step 4</p>
+          <h2>Think about safety and long-term operation</h2>
+        </div>
+        <div class="theme-grid">
+          <article class="theme-card">
+            <h3>Electrical protection</h3>
+            <p>Use proper isolation, overcurrent protection, surge protection, and earthing practice.</p>
+          </article>
+          <article class="theme-card">
+            <h3>Mechanical safety</h3>
+            <p>Roof integrity, water sealing, and wind loading should be treated as engineering concerns.</p>
+          </article>
+          <article class="theme-card">
+            <h3>Access for maintenance</h3>
+            <p>Systems should be designed so technicians can inspect, clean, and repair them safely.</p>
+          </article>
+          <article class="theme-card">
+            <h3>User training</h3>
+            <p>Even a well-designed system underperforms if users do not understand load limits and battery behavior.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Quiz</p>
+          <h2>System design review</h2>
+        </div>
+        <form class="quiz-form" data-quiz-title="System Design Quiz">
+          <div class="quiz-grid">
+            <fieldset class="quiz-card" data-correct="a">
+              <legend>1. Why should design begin with a load audit?</legend>
+              <label><input type="radio" name="design-q1" value="a"> Because demand drives array, battery, inverter, and budget decisions.</label>
+              <label><input type="radio" name="design-q1" value="b"> Because panel color changes load behavior.</label>
+              <label><input type="radio" name="design-q1" value="c"> Because the roof must always be measured first.</label>
+            </fieldset>
+            <fieldset class="quiz-card" data-correct="b">
+              <legend>2. What makes inverter sizing more than a simple power total?</legend>
+              <label><input type="radio" name="design-q2" value="a"> Inverters are sized only by battery color.</label>
+              <label><input type="radio" name="design-q2" value="b"> Startup surges from motors and compressors can exceed normal running power.</label>
+              <label><input type="radio" name="design-q2" value="c"> Inverter size is unrelated to loads.</label>
+            </fieldset>
+            <fieldset class="quiz-card" data-correct="c">
+              <legend>3. Why separate critical from non-critical loads?</legend>
+              <label><input type="radio" name="design-q3" value="a"> To make installation drawings look simpler.</label>
+              <label><input type="radio" name="design-q3" value="b"> To avoid using any batteries at all.</label>
+              <label><input type="radio" name="design-q3" value="c"> To reserve limited stored energy for the most important services.</label>
+            </fieldset>
+          </div>
+          <div class="quiz-actions">
+            <button class="button button-primary" type="submit">Check Answers</button>
+            <p class="quiz-result" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <h2>SolarSpark Academy</h2>
+        <p>System design is where theory becomes engineering decisions about loads, storage, safety, and reliability.</p>
+      </div>
+      <div class="footer-links">
+        <a href="technology.html">Technology</a>
+        <a href="economics.html">Next: Economics</a>
+        <a href="advanced.html">Advanced Topics</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="resources.html">Resources</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="calculator.html">NGN Calculator</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

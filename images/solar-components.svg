@@ -1,0 +1,22 @@
+<svg width="800" height="560" viewBox="0 0 800 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="560" rx="36" fill="#F8F3E7"/>
+  <rect x="68" y="110" width="214" height="300" rx="22" fill="#173122"/>
+  <path d="M92 144H258" stroke="#85D4E8" stroke-width="7"/>
+  <path d="M92 196H258" stroke="#85D4E8" stroke-width="7"/>
+  <path d="M92 248H258" stroke="#85D4E8" stroke-width="7"/>
+  <path d="M92 300H258" stroke="#85D4E8" stroke-width="7"/>
+  <path d="M92 352H258" stroke="#85D4E8" stroke-width="7"/>
+  <path d="M125 126V392" stroke="#85D4E8" stroke-width="7"/>
+  <path d="M175 126V392" stroke="#85D4E8" stroke-width="7"/>
+  <path d="M225 126V392" stroke="#85D4E8" stroke-width="7"/>
+  <rect x="340" y="154" width="168" height="118" rx="22" fill="#295F3E"/>
+  <rect x="562" y="120" width="160" height="214" rx="24" fill="#FFFDF7"/>
+  <rect x="592" y="160" width="100" height="132" rx="16" fill="#DCE6D7"/>
+  <path d="M120 450C241 420 320 417 404 418C519 419 591 430 680 454" stroke="#C97C12" stroke-width="14" stroke-linecap="round"/>
+  <path d="M282 222H340" stroke="#F2AE2E" stroke-width="10" stroke-linecap="round"/>
+  <path d="M508 222H562" stroke="#F2AE2E" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="424" cy="214" r="24" fill="#F2AE2E"/>
+  <text x="112" y="88" fill="#173122" font-family="Arial, sans-serif" font-size="28" font-weight="700">Panel</text>
+  <text x="364" y="132" fill="#173122" font-family="Arial, sans-serif" font-size="28" font-weight="700">Inverter</text>
+  <text x="582" y="94" fill="#173122" font-family="Arial, sans-serif" font-size="28" font-weight="700">Battery</text>
+</svg>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SolarSpark Academy | Advanced Solar Topics</title>
+  <meta name="description" content="Advanced solar topics including storage strategy, grid integration, forecasting, degradation, and control logic.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="advanced">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">SolarSpark Academy</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="beginners.html">Beginners</a>
+        <a href="technology.html">Technology</a>
+        <a href="system-design.html">System Design</a>
+        <a href="economics.html">Economics</a>
+        <a href="advanced.html">Advanced</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="resources.html">Resources</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="calculator.html">Calculator</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Advanced track</p>
+        <h1>Go beyond installation basics into system behavior, optimization, and grid interaction.</h1>
+        <p class="hero-text">
+          Advanced solar study asks harder questions: how should storage be dispatched, how does
+          degradation change long-term value, how should partial-load efficiency be treated, and how
+          can solar systems support resilient local energy networks?
+        </p>
+        <img class="hero-image" src="images/solar-grid.svg" alt="Illustration representing advanced solar integration with grid and distributed energy systems.">
+      </section>
+
+      <section class="section progress-panel" data-track-page="advanced">
+        <div>
+          <p class="eyebrow">Page progress</p>
+          <h2>Track completion of the advanced track.</h2>
+          <p class="progress-copy">Use the worksheet after the quiz if you want to explain the ideas in a more technical written format.</p>
+        </div>
+        <div class="progress-card">
+          <div class="progress-bar"><span class="progress-fill"></span></div>
+          <p class="progress-status" aria-live="polite"></p>
+          <button class="button button-primary progress-button" type="button">Mark as complete</button>
+          <a class="text-link" href="worksheets/advanced-worksheet.html" download>Download advanced worksheet</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Visual study aid</p>
+          <h2>Advanced control is often about energy timing</h2>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-card">
+            <img class="gallery-image" src="images/battery-cycle.svg" alt="Cycle diagram showing how batteries move between charging and discharging states.">
+            <figcaption>Battery value depends not only on capacity, but on how the system decides when to charge, hold reserve, and discharge.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img class="gallery-image" src="images/solar-grid.svg" alt="Diagram representing a distributed solar system integrated with loads and network infrastructure.">
+            <figcaption>Advanced solar systems require coordination between generation, storage, critical loads, and sometimes grid or generator support.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Advanced topic 1</p>
+          <h2>Battery dispatch strategy changes system economics</h2>
+        </div>
+        <div class="reading-grid">
+          <article class="reading-card">
+            <img class="section-image" src="images/battery-cycle.svg" alt="Educational graphic showing battery charge and discharge cycle behavior.">
+            <p>
+              A battery can be used in different ways: pure backup reserve, peak shaving, daytime
+              smoothing, evening load shifting, or generator minimization. Each strategy changes cycle
+              count, battery wear, and delivered value.
+            </p>
+            <p>
+              In systems with unreliable grid supply, keeping a reserve state of charge may be more
+              valuable than maximizing daily battery throughput.
+            </p>
+          </article>
+          <article class="reading-card">
+            <h3>Control questions</h3>
+            <ul class="check-list">
+              <li>What minimum reserve should be protected?</li>
+              <li>Should batteries charge from grid or generator?</li>
+              <li>How should critical and non-critical loads be separated?</li>
+              <li>What happens during multiple cloudy days?</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Advanced topic 2</p>
+          <h2>Performance analysis should include losses across the whole chain</h2>
+        </div>
+        <div class="card-grid">
+          <article class="info-card">
+            <h3>Module losses</h3>
+            <p>Temperature, mismatch, soiling, and degradation reduce raw array output.</p>
+          </article>
+          <article class="info-card">
+            <h3>Power electronics losses</h3>
+            <p>Charge controllers and inverters have efficiency curves, not perfect conversion.</p>
+          </article>
+          <article class="info-card">
+            <h3>Storage losses</h3>
+            <p>Battery round-trip efficiency and standby losses affect how much energy is actually delivered.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section">
+        <div class="content-panel">
+          <p class="eyebrow">Advanced topic 3</p>
+          <h2>Grid integration and mini-grid thinking</h2>
+          <p>
+            At larger scale, solar is not just a rooftop device. It becomes part of a distributed
+            power network with voltage behavior, frequency support, protection coordination, dispatch,
+            and curtailment constraints.
+          </p>
+          <p>
+            Mini-grids, campus systems, and community-level power systems require more sophisticated
+            thinking about load diversity, operating schedules, backup generation, and governance.
+          </p>
+        </div>
+        <div class="content-panel accent-panel">
+          <h3>Advanced concepts to study next</h3>
+          <p>
+            Forecasting, inverter control modes, black-start capability, load shedding priority,
+            power quality, and remote monitoring analytics are natural next topics after mastering
+            the lessons on this page.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Advanced topic 4</p>
+          <h2>Failure analysis and lifecycle thinking</h2>
+        </div>
+        <div class="theme-grid">
+          <article class="theme-card">
+            <h3>Degradation</h3>
+            <p>Module output slowly declines over time, so lifetime planning should not assume constant production forever.</p>
+          </article>
+          <article class="theme-card">
+            <h3>Thermal stress</h3>
+            <p>High temperatures and poor ventilation accelerate wear in electronics and batteries.</p>
+          </article>
+          <article class="theme-card">
+            <h3>Operational data</h3>
+            <p>Trends in battery voltage, inverter alarms, and production history can reveal failure before complete outage.</p>
+          </article>
+          <article class="theme-card">
+            <h3>Resilience planning</h3>
+            <p>Robust systems are designed to degrade gracefully, not fail catastrophically after a single fault.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Quiz</p>
+          <h2>Advanced review</h2>
+        </div>
+        <form class="quiz-form" data-quiz-title="Advanced Quiz">
+          <div class="quiz-grid">
+            <fieldset class="quiz-card" data-correct="a">
+              <legend>1. Why does battery dispatch strategy affect project value?</legend>
+              <label><input type="radio" name="adv-q1" value="a"> It changes reserve availability, cycling frequency, wear, and energy timing.</label>
+              <label><input type="radio" name="adv-q1" value="b"> It only changes the panel frame color.</label>
+              <label><input type="radio" name="adv-q1" value="c"> It has no effect once batteries are installed.</label>
+            </fieldset>
+            <fieldset class="quiz-card" data-correct="b">
+              <legend>2. What does round-trip efficiency describe?</legend>
+              <label><input type="radio" name="adv-q2" value="a"> The weight of the battery system after shipping.</label>
+              <label><input type="radio" name="adv-q2" value="b"> The share of stored energy recovered after charging and discharging losses.</label>
+              <label><input type="radio" name="adv-q2" value="c"> The speed of solar installation.</label>
+            </fieldset>
+            <fieldset class="quiz-card" data-correct="c">
+              <legend>3. Why is operational monitoring important?</legend>
+              <label><input type="radio" name="adv-q3" value="a"> It removes the need for inspections.</label>
+              <label><input type="radio" name="adv-q3" value="b"> It guarantees zero degradation.</label>
+              <label><input type="radio" name="adv-q3" value="c"> It helps detect degradation, alarms, and abnormal behavior before total failure.</label>
+            </fieldset>
+          </div>
+          <div class="quiz-actions">
+            <button class="button button-primary" type="submit">Check Answers</button>
+            <p class="quiz-result" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <h2>SolarSpark Academy</h2>
+        <p>Advanced lessons move from device knowledge into strategy, analytics, resilience, and network behavior.</p>
+      </div>
+      <div class="footer-links">
+        <a href="economics.html">Economics</a>
+        <a href="calculator.html">NGN Calculator</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="resources.html">Resources</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="beginners.html">Restart from Basics</a>
+        <a href="index.html">Home</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

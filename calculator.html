@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SolarSpark Academy | Solar Savings Calculator</title>
+  <meta name="description" content="Estimate monthly solar savings in Nigerian naira based on electricity use, tariff, and solar offset.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="calculator">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">SolarSpark Academy</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="beginners.html">Beginners</a>
+        <a href="technology.html">Technology</a>
+        <a href="system-design.html">System Design</a>
+        <a href="economics.html">Economics</a>
+        <a href="advanced.html">Advanced</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="resources.html">Resources</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="calculator.html">Calculator</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Estimator</p>
+        <h1>Estimate solar bill reduction in Nigerian naira.</h1>
+        <p class="hero-text">
+          This calculator is intentionally simple. It helps learners connect electricity use, tariff,
+          and solar offset percentage to a monthly bill estimate. It is not a substitute for a full
+          engineering or financial assessment.
+        </p>
+        <img class="hero-image" src="images/solar-components.svg" alt="Illustration of solar components supporting electricity cost reduction calculations.">
+      </section>
+
+      <section class="section progress-panel" data-track-page="calculator">
+        <div>
+          <p class="eyebrow">Page progress</p>
+          <h2>Track your economics practice.</h2>
+          <p class="progress-copy">Mark this page complete once you have used the NGN estimator and can explain what the result does and does not mean.</p>
+        </div>
+        <div class="progress-card">
+          <div class="progress-bar"><span class="progress-fill"></span></div>
+          <p class="progress-status" aria-live="polite"></p>
+          <button class="button button-primary progress-button" type="button">Mark as complete</button>
+        </div>
+      </section>
+
+      <section class="section calculator-layout">
+        <form class="calculator-card" id="solar-form">
+          <label>
+            Monthly electricity use (kWh)
+            <input type="number" id="usage" name="usage" min="50" value="900" required>
+          </label>
+          <label>
+            Electricity tariff (NGN per kWh)
+            <input type="number" id="rate" name="rate" min="1" step="1" value="225" required>
+          </label>
+          <label>
+            Estimated solar offset
+            <input type="range" id="offset" name="offset" min="10" max="100" step="5" value="60">
+            <span class="range-output"><strong id="offset-value">60%</strong> of current usage</span>
+          </label>
+          <button class="button button-primary" type="submit">Calculate in NGN</button>
+        </form>
+
+        <div class="results-card" aria-live="polite">
+          <p class="results-label">Estimated monthly savings</p>
+          <h2 id="savings-output">NGN 121,500</h2>
+          <p id="bill-output">New estimated monthly bill: NGN 81,000</p>
+          <p class="results-note">
+            This estimate assumes the chosen percentage of your monthly energy use is covered by solar.
+            Real results depend on weather, load timing, battery storage, equipment quality, and system design.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">How to interpret it</p>
+          <h2>Use the result as a teaching estimate, not a purchase decision by itself.</h2>
+        </div>
+        <div class="reading-grid">
+          <article class="reading-card">
+            <p>
+              If your result looks very attractive, the next question is whether the required system
+              size, battery capacity, and installation budget are realistic. High savings often imply
+              a larger system and therefore higher upfront cost.
+            </p>
+          </article>
+          <article class="reading-card">
+            <p>
+              If your result looks modest, solar may still be useful if it reduces generator use,
+              protects critical operations during outages, or stabilizes electricity quality for
+              sensitive devices.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <h2>SolarSpark Academy</h2>
+        <p>The calculator is best used alongside the lessons on technology, system design, and economics.</p>
+      </div>
+      <div class="footer-links">
+        <a href="beginners.html">Beginner Lessons</a>
+        <a href="technology.html">Technology</a>
+        <a href="economics.html">Economics</a>
+        <a href="advanced.html">Advanced Topics</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="resources.html">Resources</a>
+        <a href="certificate.html">Certificate</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

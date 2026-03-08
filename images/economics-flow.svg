@@ -1,0 +1,15 @@
+<svg width="800" height="560" viewBox="0 0 800 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="560" rx="36" fill="#FFF8EB"/>
+  <rect x="78" y="180" width="180" height="120" rx="22" fill="#295F3E"/>
+  <rect x="310" y="120" width="180" height="120" rx="22" fill="#173122"/>
+  <rect x="310" y="320" width="180" height="120" rx="22" fill="#DDE8D6"/>
+  <rect x="542" y="180" width="180" height="120" rx="22" fill="#F2AE2E"/>
+  <path d="M258 240H296" stroke="#C97C12" stroke-width="10" stroke-linecap="round"/>
+  <path d="M490 180L530 180" stroke="#C97C12" stroke-width="10" stroke-linecap="round" transform="translate(0 60)"/>
+  <path d="M400 240V300" stroke="#C97C12" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="400" cy="240" r="16" fill="#C97C12"/>
+  <text x="106" y="222" fill="#FFF8EB" font-family="Arial, sans-serif" font-size="26" font-weight="700">System Cost</text>
+  <text x="328" y="162" fill="#FFF8EB" font-family="Arial, sans-serif" font-size="24" font-weight="700">Energy Savings</text>
+  <text x="336" y="362" fill="#173122" font-family="Arial, sans-serif" font-size="24" font-weight="700">Fuel Avoided</text>
+  <text x="560" y="222" fill="#173122" font-family="Arial, sans-serif" font-size="26" font-weight="700">Project Value</text>
+</svg>

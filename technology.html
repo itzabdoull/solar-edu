@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SolarSpark Academy | Solar Technology</title>
+  <meta name="description" content="Intermediate lessons on solar panels, inverters, batteries, controllers, mounting, and performance factors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="technology">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">SolarSpark Academy</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="beginners.html">Beginners</a>
+        <a href="technology.html">Technology</a>
+        <a href="system-design.html">System Design</a>
+        <a href="economics.html">Economics</a>
+        <a href="advanced.html">Advanced</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="resources.html">Resources</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="calculator.html">Calculator</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Intermediate track</p>
+        <h1>Understand the components that make solar systems work.</h1>
+        <p class="hero-text">
+          Once the basic idea is clear, the next step is understanding how solar hardware behaves in
+          practice. This section explains the function and limitations of the main components.
+        </p>
+        <img class="hero-image" src="images/solar-components.svg" alt="Diagram-style illustration of a solar panel, inverter, and battery.">
+      </section>
+
+      <section class="section progress-panel" data-track-page="technology">
+        <div>
+          <p class="eyebrow">Page progress</p>
+          <h2>Track your understanding of components and maintenance.</h2>
+          <p class="progress-copy">Complete the quiz, then mark the page finished and download the worksheet if you want written practice.</p>
+        </div>
+        <div class="progress-card">
+          <div class="progress-bar"><span class="progress-fill"></span></div>
+          <p class="progress-status" aria-live="polite"></p>
+          <button class="button button-primary progress-button" type="button">Mark as complete</button>
+          <a class="text-link" href="worksheets/technology-worksheet.html" download>Download technology worksheet</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Modules</p>
+          <h2>Solar panels are electrical devices, not just roof tiles.</h2>
+        </div>
+        <div class="reading-grid">
+          <article class="reading-card">
+            <p>
+              A solar module combines multiple photovoltaic cells into a weather-protected assembly.
+              Modules are rated under standard test conditions, but real output is influenced by
+              irradiance, temperature, orientation, dust, aging, and shading.
+            </p>
+            <p>
+              Nameplate wattage is not a guarantee of continuous production. It is a reference point
+              for comparing modules under controlled conditions.
+            </p>
+          </article>
+          <article class="reading-card">
+            <h3>Performance variables</h3>
+            <ul class="check-list">
+              <li>Sun angle and daily irradiance profile</li>
+              <li>Cell temperature and ventilation</li>
+              <li>Soiling from dust, bird droppings, or pollution</li>
+              <li>Partial shading from trees, tanks, or nearby buildings</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Conversion</p>
+          <h2>Why the inverter is one of the most important devices in the system</h2>
+        </div>
+        <div class="card-grid">
+          <article class="info-card">
+            <h3>DC to AC conversion</h3>
+            <p>
+              Most panels produce direct current. Most buildings use alternating current. The inverter
+              bridges that gap and determines how usable the generated electricity is.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>System coordination</h3>
+            <p>
+              In many designs, the inverter also manages charging behavior, grid interaction, and
+              battery dispatch rules.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Efficiency and reliability</h3>
+            <p>
+              Inverter losses, surge capability, temperature behavior, and waveform quality all matter,
+              especially for sensitive electronics and motor loads.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section">
+        <div class="content-panel">
+          <p class="eyebrow">Maintenance visual</p>
+          <h2>Performance also depends on inspection and upkeep</h2>
+          <img class="section-image" src="images/maintenance-check.svg" alt="Illustration of a maintenance checklist, panel inspection, and service tools.">
+          <p>
+            Even high-quality equipment loses value if panels are dirty, connectors loosen, corrosion
+            spreads, or poor ventilation overheats critical electronics.
+          </p>
+        </div>
+        <div class="content-panel accent-panel">
+          <h3>Technology quiz</h3>
+          <form class="quiz-form" data-quiz-title="Technology Quiz">
+            <div class="quiz-stack">
+              <fieldset class="quiz-card" data-correct="b">
+                <legend>1. Why is nameplate wattage not the same as guaranteed field output?</legend>
+                <label><input type="radio" name="tech-q1" value="a"> Because panels stop working after installation.</label>
+                <label><input type="radio" name="tech-q1" value="b"> Real output changes with sunlight, temperature, shading, dust, and losses.</label>
+                <label><input type="radio" name="tech-q1" value="c"> Because wattage is only used for batteries.</label>
+              </fieldset>
+              <fieldset class="quiz-card" data-correct="a">
+                <legend>2. What is the inverter's main job?</legend>
+                <label><input type="radio" name="tech-q2" value="a"> To convert DC electricity into usable AC and often manage system behavior.</label>
+                <label><input type="radio" name="tech-q2" value="b"> To create sunlight for the panels.</label>
+                <label><input type="radio" name="tech-q2" value="c"> To replace the need for wiring.</label>
+              </fieldset>
+              <fieldset class="quiz-card" data-correct="c">
+                <legend>3. Why do cables and protection devices matter?</legend>
+                <label><input type="radio" name="tech-q3" value="a"> They are only decorative parts of the installation.</label>
+                <label><input type="radio" name="tech-q3" value="b"> They matter only in off-grid systems.</label>
+                <label><input type="radio" name="tech-q3" value="c"> They affect efficiency, reliability, and electrical safety.</label>
+              </fieldset>
+            </div>
+            <div class="quiz-actions">
+              <button class="button button-primary" type="submit">Check Answers</button>
+              <p class="quiz-result" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <h2>SolarSpark Academy</h2>
+        <p>Technology lessons focus on how hardware actually behaves, not just what the components are called.</p>
+      </div>
+      <div class="footer-links">
+        <a href="beginners.html">Beginner Lessons</a>
+        <a href="system-design.html">Next: System Design</a>
+        <a href="economics.html">Economics</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="resources.html">Resources</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="calculator.html">NGN Calculator</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
